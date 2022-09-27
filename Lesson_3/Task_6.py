@@ -10,3 +10,7 @@ List1 = [100, 200, 300, 400, 500]
 
 
 """
+List1 = [100, 200, 300, 400, 500]
+List1.sort()
+List1.reverse()
+print(List1)

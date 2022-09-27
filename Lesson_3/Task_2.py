@@ -19,3 +19,21 @@ D. Вывести цену самого дорогого товара.
 15 руб. 30 коп
 
 '''
+t = 'руб.'
+t_1 = 'коп'
+list = [90.8, 103.2, 19.5]
+for i in list:
+    print(str(int(i)),t,str(int(i*10%10*10)),t_1)
+print("отсортированный список по возрастанию:")
+list.sort()
+for i in list:
+    print(str(int(i)),t,str(int(i*10%10*10)),t_1)
+print("отсортированный список по убыванию:")
+new_list = []
+list.sort()
+list.reverse()
+for i in list:
+    new_list.append(i)
+    print(str(int(i)),t,str(int(i*10%10*10)),t_1)
+print('цена самого дорого товара:')
+print(str(int(max(list))),t,str(int(max(list)*10%10*10)),t_1)
