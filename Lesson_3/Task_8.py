@@ -11,10 +11,16 @@ list=[0, 7, 43, 10, -4, 2, 28, 7, 43, 7, 0]
 >> 43 2
 
 '''
-list=[0, 7, 43, 10, -4, 2, 28, 7, 43, 7, 0]
-a = max(list)
-b = list.index(a)
-print(a,b)
-
+s = [int(i) for i in input().split()]
+x = int(input())
+for i in range(0, len(s)):
+    if x>s[i]:
+        print(i+1)
+        break
+    elif x==s[i]:
+        continue
+        print(i+1)
+    elif x < min(s[i]):
+        print(len(s)+1)
 
     
