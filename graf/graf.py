@@ -109,7 +109,7 @@ ttk.Button(text="Удалить", command=delete).grid(row=2, column=1, padx=5, 
 window.mainloop()
 """
 # 128 task 
-""" времени в разрез, баг исправлю позже 
+
 def km():
     num = entry_box.get()
     msg = Label(window, text = f"{float(num) * 0.6214} ml" )
@@ -117,7 +117,7 @@ def km():
 def ml():
     num1 = entry_box1.get()
     msg = Label(window, text = f"{float(num1) * 1.6093} km" )
-    msg.place(x = 20, y = 20)
+    msg.place(x = 20, y = 140)
 
 window = Tk()
 window.title("Window title")
@@ -131,13 +131,13 @@ entry_box.place(x = 100, y = 5, width = 100, height = 20 )
 
 
 label1 = Label(text = "Enter a ml: ")
-entry_box1 = Entry (text = 0)
+entry_box1 = ttk.Entry()
+entry_box1.grid(column=2, row=1, padx=100, pady=80, sticky=EW)
 button1 = Button(text = "Press me", command = ml)
 button1.place(x = 20, y = 100, width = 120, height = 25)
 label1.place(x = 20, y  = 75, width = 100, height = 20   )
-entry_box1.place(x = 100, y = 75, width = 100, height = 20 )
 window.mainloop()
-"""
+
 #129 task
 """
 from tkinter import ttk
