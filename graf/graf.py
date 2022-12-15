@@ -38,35 +38,39 @@ window.mainloop()
 """
 # 126 task 
 """
-WASTED.....
-def Call():
-    num = entry_box.get()
-    res = []
-    res.append(num)
-    global index 
-    for i in res:
-        index += 1 
-    if index > 1: 
-        output_txt = Message(text = int(res[index-1]) + int(res[index-2]))
-    else:
-        output_txt = Message(text = int(res[index-1]))
-    answer = output_txt["text"]
-    output_txt.place(x = 200, y = 10, width = 150, height = 26  ) 
-    
-    button["bg"] = "blue"
-    button["fg"] = "white"
+
+def Suma():
+    a = entry_box.get()
+    b = output_box["text"]
+    a = int(a)
+    b = int(b)
+    RBB = a + b
+    output_box["text"] = RBB
+
+def Chistka():
+    RBB = 0;
+    output_box["text"] = 0
+    entry_box.delete(0, END)
 
 window = Tk()
-window.title("Window Title")
-window.geometry("450x100")
-label = Label(text = "Enter a number: ")
-entry_box = Entry (text = 0)
-button = Button(text = "Press me", command = Call)
+window.title('СУММА')
+window.geometry("600x200")
 
-button.place(x = 30, y = 20, width = 120, height = 25)
-label.place(x = 10, y  = 5, width = 100, height = 20   )
-entry_box.place(x = 100, y = 5, width = 100, height = 20 )
+label = Label(text = "Жду число")
+label.place(x=10,y=10,width = 220,height = 20)
 
+entry_box = Entry(text=0)
+entry_box.place(x=50,y=40,width = 220,height = 30)
+
+output_box = Message(text=0)
+output_box ["bg"] = "green"
+output_box.place(x=275,y=40,width = 220,height = 30)
+
+button1 = Button(text = "Сложить",command = Suma)
+button1.place(x = 176,y = 90,width = 100,height = 30)
+
+button2 = Button(text = "Очистить",command = Chistka)
+button2.place(x = 50,y = 90,width = 100,height = 30)
 window.mainloop()
 """
 #127 task 
@@ -270,11 +274,6 @@ def css():
     new_age = age_entry.get()
     file = open("nmag.csv","a")
     
-    #file.write(str(new_name))
-    #file.write("\n") Перепутал с обычным текстовым файлом, в прошлых заданиях немного некорректно, исправить нет времени, сделаю позже
-    #file.write(str(new_age))
-    #file.write("\n")
-   
     a = new_name + "," + new_age
     file.write(str(a))
     file.close()
